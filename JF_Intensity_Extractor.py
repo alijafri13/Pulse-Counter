@@ -46,11 +46,9 @@ directory = '/Volumes/External/Research/Jellyfish/Pulse_Counter/Videos/'
 all_videos = []
 for file in os.scandir(directory):
     all_videos.append(file.path + '/')
-print(all_videos)
 for i in all_videos[::2]:
-    print(i)
-    list = os.listdir(i) # dir is your directory path
-    number_files = int(len(list)/2)
+    length = os.listdir(i) # dir is your directory path
+    number_files = int(len(length)/2)
 
     # path = '/Volumes/External/Jellyfish/Pulse_Counter_Videos/Example_TIF/'
     path = i
@@ -122,7 +120,8 @@ for i in all_videos[::2]:
         plt.close('all')
         JFC = []
         # Normally 9 JFCs, 8 Condos & 1 Background
-        for each in range(2):
+        condos = int(input('How many condos to Analyze? '))
+        for each in range(condos):
             # first image
             img_1 = skimage.io.imread(path + 'Frame_' + str(slst[t][0])  + ftype)
             # last image
@@ -167,13 +166,14 @@ for i in all_videos[::2]:
 
                 mat.append(lst + alst)
                 # print(mat)
-                #print('pic:  ' + str(i))
+                # print('pic:  ' + str(i))
 
         except:
-            print('pass')
-            pass
+            # print('pass')
 
-        print('loop: ' + str(t))
+            pass
+        print('processed ' + tail)
+        # print('loop: ' + str(t))
 
     ################################################################################
     ######## Writing our matrix of ROI measurments for all frames to a file ########
