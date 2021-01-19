@@ -4,6 +4,9 @@
 The pulse-counter program is a frame by frame based analysis program that recognizes pulses for a jellyfish over a course of time. As Cassiopea pulse,the relaxation and 
 contraction of the bell results in a change in average pixel intensity. The jellyfish are dark against a white background. 
 
+![alt text](https://github.com/alijafri13/Pulse-Counter/blob/main/Hour_0.png?raw=true)
+
+
 ## Installation
 For easiest use, clone the repository and open program files on an IDE (pycharm, etc.). An additional shell file has been added for Linux and macOS users to run 
 without and IDE. 
@@ -21,6 +24,10 @@ without and IDE.
  containing your ouputs. The video folder may contain folders of frames within them. Output folders must have two folders present: Analyzed and TXT.
  
  ## Execution
+ 
+ ![alt text](https://github.com/alijafri13/Pulse-Counter/blob/main/Figure_1.png?raw=true)
+ 
+ 
  #### Inputs to change in Intensity_Extractor
  - ftype
  - directory (this is the directory where videos are)
